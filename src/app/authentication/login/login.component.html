@@ -1,0 +1,17 @@
+<div class="page-auth">
+  <div class="page-auth-logo">
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="ui-fluid page-auth-wrap">
+    <div class="form-group">
+      <input pInputText type="text" formControlName="username" placeholder="Enter username" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && loginForm.username.errors }" />
+      <app-control-messages [id]="'errUserName'" [control]="loginForm.controls['username']" [label]="'Username'">
+      </app-control-messages>
+      <input pInputText type="password" formControlName="password" placeholder="Enter password " class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && loginForm.password.errors }" />
+      <app-control-messages [id]="'errPassword'" [control]="loginForm.controls['password']" [label]="'Password'"
+        class="logerror"></app-control-messages>
+    </div>
+    <button pButton type="submit" [disabled]="loginForm.invalid" id="loginBtn" label="Login"></button>
+  </form>
+</div>

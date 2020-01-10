@@ -1,0 +1,9 @@
+<h1>Welcome to busone admin</h1>
+<div *ngIf="CurrentStop.length === 0; else intrip">
+  <p>bus in waiting state</p>
+
+</div>
+
+<ng-template #intrip>
+  <p>Bus is at: {{CurrentStop[CurrentStop.length -1] }}</p>
+</ng-template>

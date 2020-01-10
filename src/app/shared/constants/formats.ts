@@ -1,0 +1,9 @@
+export const dateFormat = 'dd/MM/yyyy';
+export const dateDashedFormat = 'dd-MM-yyyy';
+export const dateDashedFormatWithTime = 'dd-MM-yyyy hh:mm a';
+export const dateFormatForCalendar = 'dd/mm/yy';
+export const dateDashedFormatForCalendar = 'dd-mm-yy';
+export const dateTimeFormat = 'dd/MM/yyyy /  hh:mm:ss a';
+export const dateTimeFormatWithSecs = 'dd/MM/yyyy  hh:mm:ss a';
+export const timeDateFormat = 'HH:mm:ss / dd/MM/yyyy';
+export const dateDashedFormatYYMMDD = 'yyyy-MM-dd';

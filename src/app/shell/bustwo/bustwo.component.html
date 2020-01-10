@@ -1,0 +1,22 @@
+<h1>Welcome to bustwo</h1>
+<div *ngIf="CurrentStop.length === 0; else intrip">
+
+  <p *ngIf="counts.length === 0; else realtime">Number of seats remaining: {{totalSeats -noOfSeats}}</p>
+
+  <ng-template #realtime>
+    <p>Number of seats remaining: {{totalSeats - counts[counts.length -1] }}</p>
+  </ng-template>
+
+  <div *ngFor="let seat of counts">
+    <p>{{  seat}}</p>
+  </div>
+
+  <button (click)="seatBooking()" *ngIf=" ( totalSeats - noOfSeats > 1 ) && status ">Book Seat</button>
+  <!-- <button (click)="seatBooking()" *ngIf="noOfSeats > 1 && myResponse.Status != 'null' ">Cancel Seat</button> -->
+
+  <p>Total seats {{countOfSeats}}</p>
+</div>
+
+<ng-template #intrip>
+  <p>Bus is at: {{CurrentStop[CurrentStop.length -1] }}</p>
+</ng-template>

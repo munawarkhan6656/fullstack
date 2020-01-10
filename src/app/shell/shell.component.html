@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="site-wrapper" [class.hide-sidebar]="isSideBarOpen">
+  <!-- <app-side-nav class="sidebar-wrapper" (toggleHamBurger)="toggleHamburger($event)"></app-side-nav> -->
+  <!-- add my own side nav -->
+
+  <main class="main-wrapper">
+    <div class="nav-overlay" [class.hide-sidebar]="isSideBarOpen"></div>
+    <div class="content-wrapper">
+      <article>
+        <section>
+          <router-outlet></router-outlet>
+        </section>
+      </article>
+    </div>
+  </main>
+</div>
